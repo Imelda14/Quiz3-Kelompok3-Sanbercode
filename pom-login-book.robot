@@ -2,23 +2,22 @@
 Documentation        Segala hal yg berkaitan dengan login
 Resource             base-login-book.robot
 
+*** Variables ***
+${username_input}    locator=//android.widget.EditText[@resource-id="com.example.myapplication:id/username"]
+${password_input}    locator=//android.widget.EditText[@resource-id="com.example.myapplication:id/password"]
+
 *** Keywords ***
 Login With Valid Credential
     [Arguments]                ${username}   ${password}
     Verify Home Screen Appears
     Click Sign In Button On Home Screen
-    Input Username        ${username}
-    Input User Password    ${password}
+    Input Username             ${username}
+    Input User Password        ${password}
     Click Sign In Button On Login Screen
 
-*** Variables ***
-*** Variables ***
-${username_input}    //android.widget.EditText[@resource-id="com.example.myapplication:id/username"]
-password_input: //android.widget.EditText[@resource-id="com.example.myapplication:id/password"]
-
-*** Keywords ***
 Verify Home Screen Appears
     Element Should Be Visible        locator=//android.widget.ImageView[@resource-id="com.example.myapplication:id/imageView4"]
+
 
 Click Sign In Button On Home Screen
     Click Element                    locator=//android.widget.Button[@resource-id="com.example.myapplication:id/login"]
