@@ -2,6 +2,7 @@
 Documentation                Open application, close application, etc
 Library                      AppiumLibrary
 
+
 *** Variables ***
 ${REMOTE_URL}            http://127.0.0.1:4723/wd/hub
 ${PLATFORM_NAME}         Android
@@ -18,6 +19,6 @@ Open Flight Application
     ...                    deviceName=${DEVICE_NAME}    
     ...                    appPackage=${APP_PACKAGE}    
     ...                    appActivity=${APP_ACTIVITY}
-
+    
 Close Flight Application
-    Close Application
+    Close All Application

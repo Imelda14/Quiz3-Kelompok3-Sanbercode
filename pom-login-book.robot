@@ -12,7 +12,8 @@ Login With Valid Credential
     Click Sign In Button On Login Screen
 
 *** Variables ***
-username_input: //android.widget.EditText[@resource-id="com.example.myapplication:id/username"]
+*** Variables ***
+${username_input}    //android.widget.EditText[@resource-id="com.example.myapplication:id/username"]
 password_input: //android.widget.EditText[@resource-id="com.example.myapplication:id/password"]
 
 *** Keywords ***
